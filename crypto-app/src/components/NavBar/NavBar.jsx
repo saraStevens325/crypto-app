@@ -6,7 +6,7 @@ import arrow_icon from '../../assets/arrow_icon.png'
 const NavBar = () => {
   return (
     <div className='navbar'>
-        <img src={logo} alt="" />
+        <img src={logo} alt="" className='logo' />
         <ul>
             <li>Home</li>
             <li>Features</li>
@@ -16,8 +16,8 @@ const NavBar = () => {
         <div className="nav-right">
             <select>
                 <option value="USD">USD</option>"
-                <option value="EUR">USD</option>"
-                <option value="INR">USD</option>"
+                <option value="EUR">EUR</option>"
+                <option value="INR">INR</option>"
             </select>
             <button>Sign up <img src={arrow_icon} alt="" /></button>
         </div>
