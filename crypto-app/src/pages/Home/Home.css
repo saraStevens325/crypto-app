@@ -11,13 +11,20 @@
     text-align: center;
     gap: 30px;
 }
+.hero .logo{
+    width: 500px;
+    
+
+} 
 .hero h1{
     font-size: max(4vw, 36px );
+    color: purple;
+    
     
 }
 .hero p{
     width: 75%;
-    color: #e3e3e3;
+    color: purple;
     line-height: 1.5;
 }
 .hero form{
@@ -37,11 +44,13 @@
     padding-left: 10px;
     border: none;
     outline: none;
+    
 }
 .hero button{
     border: none;
-    background: #7927ff;
-    color: white;
+    background: #00c8b8;
+    color: black;
+    font-weight: 500;
     font-size: 16px;
     padding: 10px 30px;
     border-radius: 5px;
@@ -51,7 +60,7 @@
 .crypto-table{
     max-width: 800px;
     margin: auto;
-    background: linear-gradient(rgba(84,3,255,0.15), rgba(105,2,153,0.15));
+    background:none;
     border-radius: 15px;
 }
 .table-layout{
@@ -61,8 +70,10 @@
     align-items: center;
     border-bottom: 1px solid #3c3c3c;
 }
+
 .market-cap{
     text-align: right;
+    
     
 }
 .table-layout:last-child{
@@ -79,10 +90,30 @@
     
 }
 .table-layout .green{
-    color: #00d515;
+    color: #22b21d;
     text-align: center;
 }
 .table-layout .red{
-    color: #ff4646;
+    color: rgb(207, 23, 23);
     text-align: center;
 }
+@media (max-width: 768px) {
+    .table-layout{
+        grid-template-columns: 0.5fr 3fr 1fr 1fr;
+    }
+    .market-cap{
+        display: none;
+    }
+}
+@media (max-width: 500px){
+    .table-layout div img{
+        width: 25px;
+    }
+    .table-layout{
+        font-size: 13px;
+    }
+    .hero form input{
+        width: 100px;
+    }
+}
+

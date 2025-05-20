@@ -1,10 +1,27 @@
 import React, { useContext, useState, useEffect } from 'react'
 import './Home.css'
 import { CoinContext } from '../../context/CoinContext'
+import logo from "../../assets/logo.png"
 const Home = () => {
 
   const {allCoin, currency} = useContext(CoinContext);
   const [displayCoin, setDisplayCoin] = useState([]);
+  const [input, setInput] = useState('');
+
+  const handleInput = (e) => {
+    setInput(e.target.value);
+    if(e.target.value === ""){
+      setDisplayCoin(allCoin);
+    }
+
+  }
+  const searchHandler = async (e) => {
+    e.preventDefault()
+    const coins = await allCoin.filter((item)=>{
+      return item.name.toLowerCase().includes(input.toLowerCase())
+    })
+    setDisplayCoin(coins);
+}
 
   useEffect(() => {
     setDisplayCoin(allCoin);
@@ -13,10 +30,13 @@ const Home = () => {
   return (
     <div className='home'>
       <div className='hero'>
-        <h1>Crypto Marketplace</h1>
-        <p>Welcome to my cryptocurrency marketplace. Sign up to explore and track your favorite cryptocurrencies.</p>
-        <form>
-          <input type="text" placeholder='Search Crypto' />
+        <img src={logo} alt="" className='logo' />
+        <form onSubmit={searchHandler}>
+          <input onChange={handleInput} list='coinlist' required type="text" placeholder='Search Crypto' />
+          <datalist id="coinlist">
+            {allCoin.map((item, index)=>(<option key={index} value={item.name} />))}
+          </datalist>
+          
           <button type='submit'>Search</button>
         </form>
       </div>
