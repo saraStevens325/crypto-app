@@ -13,9 +13,10 @@
 .navbar ul{
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 100px;
     justify-content: center;
     flex: 1;
+    font-size: 25px;
     
 }
 .navbar ul li{
@@ -35,10 +36,13 @@
     border: 2px solid purple;
     justify-content: center;
     flex: 1;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
     
 }
 .navbar option{
-    background-color: #09005c;
+    background-color: rgb(69, 66, 66);
     color: white;
 }
 
