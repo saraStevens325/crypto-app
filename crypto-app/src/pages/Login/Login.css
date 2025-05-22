@@ -53,6 +53,7 @@
 
 .login-form button {
     margin-top: 10px;
+    margin-bottom: 50px;
     padding: 12px 0;
     background: linear-gradient(90deg, #00c8b8 60%, #952cb2 100%);
     color: #fff;
@@ -68,6 +69,29 @@
 .login-form button:hover {
     background: linear-gradient(90deg, #952cb2 60%, #00c8b8 100%);
     transform: translateY(-2px) scale(1.03);
+}
+
+.signup-link {
+    color: #00c8b8;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+.google-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: none;
+    background: #fff;
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
 }
 
 @media (max-width: 500px) {
