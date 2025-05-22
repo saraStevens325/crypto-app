@@ -23,6 +23,17 @@
     cursor: pointer;
 
 }
+.nav-right button{
+    border: none;
+    background: #00c8b8;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
 .nav-right{
     display: flex;
     align-items:center;
@@ -56,6 +67,10 @@
         padding: 8px 18px;
         font-size: 14px;
     }
+    .navbar ul{
+        gap: 8px;
+        font-size: 14px;
+    }
 }
 
 
@@ -63,8 +78,14 @@
     .navbar{
         padding: 20px 5%;
     }
-    .navbar ul{
+    .navbar ul li{
         display: none;
     }
     
+}
+@media (max-width: 600px) {
+    .navbar ul li{
+        gap: 16px;
+        font-size: 14px;
+    }
 }

@@ -29,12 +29,12 @@ const NavBar = () => {
         
         
         <ul>
-            <Link to={`/`}><li>Home</li></Link>
-            <li>Features</li>
-            <li>Pricing</li>
-            <li>Blog</li>
+            {/* <Link to={`/`}><li>Home</li></Link> */}
+            
         </ul>
         <div className="nav-right">
+            <Link to={`/login`}><button className="navbar-button">Login</button></Link>
+            <Link to={`/signup`}><button className="navbar-button">Signup</button></Link>
             <select onChange={handleCurrency}>
                 <option value="usd">USD</option>"
                 <option value="eur">EUR</option>"
